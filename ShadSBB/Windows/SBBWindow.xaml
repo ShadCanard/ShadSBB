@@ -1,0 +1,12 @@
+﻿<mah:MetroWindow x:Class="ShadSBB.Windows.SBBWindow"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShadSBB.Windows"
+        mc:Ignorable="d"
+        Title="ShadSBB" Height="450" Width="800">
+    <cef:ChromiumWebBrowser x:Name="Browser" />
+</mah:MetroWindow>
