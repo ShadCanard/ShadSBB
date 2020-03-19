@@ -38,7 +38,6 @@ namespace ShadSBB.Windows
             }
             Browser.Address = url;
             Browser.DisplayHandler = new SBBDisplayHandler();
-            SetImmersiveScreen();
         }
 
         internal void SetFullscreen(bool fullscreen)
@@ -68,7 +67,7 @@ namespace ShadSBB.Windows
             Instance.GetInstance().ShutdownApp();
         }
 
-        private void SetImmersiveScreen()
+        internal void SetImmersiveScreen()
         {
             UseNoneWindowStyle = true;
             UseNoneWindowStyle = false;

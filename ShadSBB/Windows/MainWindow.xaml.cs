@@ -25,5 +25,15 @@ namespace ShadSBB.Windows
             InitializeComponent();
             if (App.SBBLaunched) Hide();
         }
+
+        private void OnShowFlyout(object sender, RoutedEventArgs e)
+        {
+            SettingsFlyout.IsOpen = !SettingsFlyout.IsOpen;
+        }
+
+        private void OnShowConsole(object sender, RoutedEventArgs e)
+        {
+            ConsoleFlyout.IsOpen = !ConsoleFlyout.IsOpen;
+        }
     }
 }

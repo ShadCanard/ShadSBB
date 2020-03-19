@@ -24,6 +24,10 @@ namespace ShadSBB
                 SBBLaunched = true;
                 string url = e.Args[0];
                 Instance.GetInstance().GetWindow<SBBWindow>(url).Show();
+                if(e.Args.Contains("-i") || e.Args.Contains("--i") || e.Args.Contains("-immersive") || e.Args.Contains("--immersive"))
+                {
+                    Instance.GetInstance().GetWindow<SBBWindow>().SetImmersiveScreen();
+                }
             }
             else
             {

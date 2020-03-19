@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShadSBB.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -11,6 +12,8 @@ namespace ShadSBB.Infrastructure
         private static Instance _instance;
         private List<UserControl> _fragments;
         private List<Window> _windows;
+        private Settings _settings;
+        private WebAppRepository _webApps;
 
         public static Instance GetInstance()
         {
@@ -42,6 +45,19 @@ namespace ShadSBB.Infrastructure
             _windows = null;
             _fragments = null;
             App.Current.Shutdown();
+        }
+
+        public Settings GetSettings()
+        {
+            if (_settings == null) _settings = Settings.Load();
+            if (_settings == null) _settings = new Settings();
+            return _settings;
+        }
+
+        public WebAppRepository GetWebApps()
+        {
+            if (_webApps == null) _webApps = new WebAppRepository();
+            return _webApps;
         }
     }
 }

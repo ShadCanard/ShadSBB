@@ -77,7 +77,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Fragments\ConsoleFlyout.xaml.cs">
+      <DependentUpon>ConsoleFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\SettingsFlyout.xaml.cs">
+      <DependentUpon>SettingsFlyout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\DSBBDisplayHandler.cs" />
+    <Compile Include="Infrastructure\Extensions.cs" />
+    <Compile Include="Infrastructure\SerializerHelper.cs" />
+    <Compile Include="Infrastructure\Settings.cs" />
+    <Compile Include="Models\WebApp.cs" />
+    <Compile Include="Repositories\WebAppRepository.cs" />
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -113,10 +124,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Fragments\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Page Include="Fragments\ConsoleFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\SettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

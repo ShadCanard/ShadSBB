@@ -4,14 +4,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ShadSBB.Windows"
+        xmlns:local="clr-namespace:ShadSBB.Fragments"
+            
         mc:Ignorable="d"
         Title="ShadSBB" Height="450" Width="800">
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
-            
+            <Button Click="OnShowFlyout" Content="Properties" />
+            <Button Click="OnShowConsole" Content="Console" />
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
     <Grid>
+        <mah:FlyoutsControl>
+            <mah:Flyout Position="Bottom" x:Name="ConsoleFlyout" Header="Console">
+                <local:ConsoleFlyout />
+            </mah:Flyout>
+            <mah:Flyout Position="Left" x:Name="SettingsFlyout" Width="360" Header="Settings">
+                <local:SettingsFlyout />
+            </mah:Flyout>
+        </mah:FlyoutsControl>
+
     </Grid>
 </mah:MetroWindow>
